@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add or Update Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="shopping_cart.html">Shopping Cart</a></li>
+        </ul>
+    </nav>
+
+    <section id="add-card">
+        <h1>Add or Update Card</h1>
+        <form onsubmit="saveCard(); return false;">
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" maxlength="16" required>
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="text" id="expiry-date" placeholder="MM/YY" required>
+            <button type="submit">Save Card</button>
+        </form>
+    </section>
+
+    <script src="JavaScript.js"></script>
+</body>
+</html>

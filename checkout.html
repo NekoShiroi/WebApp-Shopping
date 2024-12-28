@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="shopping_cart.html">Shopping Cart</a></li>
+        </ul>
+    </nav>
+
+    <section id="checkout">
+        <h1>Checkout</h1>
+
+        <h2>Review Your Items</h2>
+        <div id="checkout-items">
+            <!-- List of products will be displayed here from JavaScript -->
+        </div>
+
+        <h2>Shipping Address</h2>
+        <p id="address-info">No address on file. <a href="#" onclick="addOrUpdateAddress()">Add/Update Address</a></p>
+
+        <div id="address-form" style="display: none;">
+            <form onsubmit="saveAddress(); return false;">
+                <label for="address">Address:</label>
+                <input type="text" id="address" required>
+                <button type="submit">Save Address</button>
+            </form>
+        </div>
+
+        <h2>Payment Method</h2>
+        <p id="card-info">No card on file. <a href="card.html">Add/Update Card</a></p>
+
+        <button onclick="confirmPurchase()">Confirm Purchase</button>
+    </section>
+
+    <script src="JavaScript.js"></script>
+</body>
+</html>
